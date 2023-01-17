@@ -63,4 +63,17 @@ console.log(water.info());
 const coke = new Drink2('Coke');
 console.log(coke.info());
 
+// Inheritance
+class Beer extends Drink {
+  constructor(name, alcohol) {
+    super(name);
+    this.alcohol  = alcohol;
+  }
 
+  info() {
+    return `${super.info()} and have ${this.alcohol}% of alcohol`;
+  }
+}
+
+const lagunitasIPA = new Beer('Lagunitas IPA', 6.2);
+console.log(lagunitasIPA.info());
